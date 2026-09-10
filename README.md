@@ -35,7 +35,7 @@ Most of what's here was run on **Leonardo** at CINECA, up to 1792 cores or 40 A1
 | **[jacobi-poisson-solver](https://github.com/prabhkodes/jacobi-poisson-solver)** | One Laplace problem in four parallel models — MPI+OpenMP, HDF5 parallel I/O, OpenACC, NVSHMEM | **94% efficiency to 1120 cores**; checkpointing changes which config is fastest |
 | **[fisher-kpp-rumour-diffusion](https://github.com/prabhkodes/fisher-kpp-rumour-diffusion)** | Reaction-diffusion PDE solved in parallel with PETSc — `DMDA`, Runge-Kutta time integration | Validated against the analytic travelling-wave speed |
 
-## Finding out why code is slow
+## Finding out why code is slow and making it go faaaaast
 
 | Project | What it is | Result |
 |---|---|---|
