@@ -30,19 +30,19 @@ Most of what's here was run on **Leonardo** at CINECA, up to 1792 cores or 40 A1
 
 | Project | What it is | Result |
 |---|---|---|
-| **[low_level_optimisations](https://github.com/prabhkodes/low_level_optimisations)** | An out-of-tree **LLVM pass** that classifies loop memory access by stride and predicts vectorisability before the code runs | Isolated **30% pure lost vectorisation** with cache behaviour held constant |
-| **[gpu-kernel-profiling](https://github.com/prabhkodes/gpu-kernel-profiling)** | Reading Nsight Systems traces on A100 — plus tooling to extract kernel timings straight from the trace databases | Traced a kernel at **11% of peak** to a 32-way shared-memory bank conflict |
-| **[fft-gpu-programming-models](https://github.com/prabhkodes/fft-gpu-programming-models)** | Six implementations of one FFT — hand-written CUDA, OpenACC and cuFFT — benchmarked head to head | OpenACC came in **≈5× slower** than hand-tuned CUDA |
-| **[matrix-multiplication-parallel](https://github.com/prabhkodes/matrix-multiplication-parallel)** | Dense GEMM four ways, with roofline analysis | **45 TFLOP/s on 16 nodes** at N = 224,000 |
+| **[low_level_optimisations](https://github.com/prabhkodes/low_level_optimisations)** | An out-of-tree **LLVM pass** that classifies loop memory access by stride and predicts vectorisability before the code runs | **30%** lost purely to missed vectorisation |
+| **[gpu-kernel-profiling](https://github.com/prabhkodes/gpu-kernel-profiling)** | Reading Nsight Systems traces on A100 — plus tooling to extract kernel timings straight from the trace databases | **11% of peak**, traced to a bank conflict |
+| **[fft-gpu-programming-models](https://github.com/prabhkodes/fft-gpu-programming-models)** | Six implementations of one FFT — hand-written CUDA, OpenACC and cuFFT — benchmarked head to head | OpenACC **5× slower** than CUDA |
+| **[matrix-multiplication-parallel](https://github.com/prabhkodes/matrix-multiplication-parallel)** | Dense GEMM four ways, with roofline analysis | **45 TFLOP/s** on 16 nodes |
 
 ## Scientific codes, ported and optimised
 
 | Project | What it is | Result |
 |---|---|---|
-| **[miniWeather-mpi-openacc](https://github.com/prabhkodes/miniWeather-mpi-openacc)** | Fortran atmospheric model taken to MPI + OpenMP + OpenACC, with parallel NetCDF, CMake and containerised CI | **190 s → 2.1 s** on 256 cores, another **8.2×** on GPU |
-| **[quantum-espresso-ks-scaling](https://github.com/prabhkodes/quantum-espresso-ks-scaling)** | Profiling and GPU-porting the Davidson eigensolver inside Quantum ESPRESSO — plane-wave DFT | FFT scales **11.3×**, the solver only **2.4×** — the bottleneck isn't where you'd guess |
-| **[jacobi-poisson-solver](https://github.com/prabhkodes/jacobi-poisson-solver)** | One Laplace problem in four parallel models — MPI+OpenMP, HDF5 parallel I/O, OpenACC, NVSHMEM | **94% efficiency to 1120 cores**; checkpointing changes which config is fastest |
-| **[fisher-kpp-rumour-diffusion](https://github.com/prabhkodes/fisher-kpp-rumour-diffusion)** | Reaction-diffusion PDE solved in parallel with PETSc — `DMDA`, Runge-Kutta time integration | Validated against the analytic travelling-wave speed |
+| **[miniWeather-mpi-openacc](https://github.com/prabhkodes/miniWeather-mpi-openacc)** | Fortran atmospheric model taken to MPI + OpenMP + OpenACC, with parallel NetCDF, CMake and containerised CI | **190 s → 2.1 s**, then **8.2×** on GPU |
+| **[quantum-espresso-ks-scaling](https://github.com/prabhkodes/quantum-espresso-ks-scaling)** | Profiling and GPU-porting the Davidson eigensolver inside Quantum ESPRESSO — plane-wave DFT | FFT **11.3×**, solver only **2.4×** |
+| **[jacobi-poisson-solver](https://github.com/prabhkodes/jacobi-poisson-solver)** | One Laplace problem in four parallel models — MPI+OpenMP, HDF5 parallel I/O, OpenACC, NVSHMEM | **94% efficiency** at 1120 cores |
+| **[fisher-kpp-rumour-diffusion](https://github.com/prabhkodes/fisher-kpp-rumour-diffusion)** | Reaction-diffusion PDE solved in parallel with PETSc — `DMDA`, Runge-Kutta time integration | Matches the analytic wave speed |
 
 ## Making it run anywhere, and at scale
 
