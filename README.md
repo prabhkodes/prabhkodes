@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>I make scientific code run faster on bigger machines.</b><br>
-  <sub>Master in High Performance Computing · ICTP &amp; SISSA, Trieste, Italy</sub>
+  <sub>Master's in High Performance Computing · ICTP &amp; SISSA, Trieste, Italy</sub>
 </p>
 
 <p align="center">
@@ -25,16 +25,21 @@
 
 ---
 
-Currently finishing an **MHPC at ICTP/SISSA** (thesis December 2026) after four years building
-production platforms — distributed compute, CI/CD and data pipelines — at AI startups. These days I
-spend my time porting and profiling scientific codes for heterogeneous CPU/GPU systems.
+Currently finishing a **Master's in High Performance Computing** at the
+[**Abdus Salam International Centre for Theoretical Physics (ICTP)**](https://www.ictp.it/) — a UNESCO
+research centre in Trieste — run jointly with [SISSA](https://www.sissa.it/), the International School
+for Advanced Studies. Thesis defends December 2026.
+
+Before that, four years building production platforms — distributed compute, CI/CD and data pipelines —
+at AI startups. These days I spend my time porting and profiling scientific codes for heterogeneous
+CPU/GPU systems.
 
 Most of what's here was run on **Leonardo** at CINECA, up to 1792 cores or 40 A100s.
 Each badge above links to a project that uses it.
 
 **Right now**
 
-- **MHPC thesis with [OGS](https://www.ogs.it/)** — taking [`gmrecords`](https://github.com/usgs/groundmotion-processing)
+- **Master's thesis with [OGS](https://www.ogs.it/)**, the National Institute of Oceanography and Applied Geophysics — taking [`gmrecords`](https://github.com/usgs/groundmotion-processing)
   ground-motion processing to the **edge**, so a seismological network processes records on the
   accelerometers themselves instead of shipping raw waveforms to a central server.
 - **Ongoing research on [xFFL](https://github.com/alpha-unito/xffl) with the University of Turin** —
