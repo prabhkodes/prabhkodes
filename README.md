@@ -2,20 +2,25 @@
 
 <p align="center">
   <b>I make scientific code run faster on bigger machines.</b><br>
-  <sub>Master in High Performance Computing · ICTP &amp; SISSA, Trieste</sub>
+  <sub>Master in High Performance Computing · ICTP &amp; SISSA, Trieste, Italy</sub>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Fortran-734F96?style=flat-square&logo=fortran&logoColor=white">
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white">
-  <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/MPI-364d6e?style=flat-square">
-  <img src="https://img.shields.io/badge/OpenMP-006DB8?style=flat-square">
-  <img src="https://img.shields.io/badge/OpenACC-FF6200?style=flat-square">
-  <img src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white">
-  <img src="https://img.shields.io/badge/LLVM-262D3A?style=flat-square&logo=llvm&logoColor=white">
-  <img src="https://img.shields.io/badge/SLURM-46a2f1?style=flat-square">
+  <a href="mailto:prabhsharan84@gmail.com"><img alt="Email" src="https://img.shields.io/badge/prabhsharan84@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/prabhsharan-singh"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a>
+  <img alt="Location" src="https://img.shields.io/badge/Trieste,%20Italy-555?style=flat-square&logo=googlemaps&logoColor=white">
+  <img alt="Open to relocation" src="https://img.shields.io/badge/open%20to%20relocation-2ea44f?style=flat-square">
+</p>
+
+<p align="center">
+  <a href="https://github.com/prabhkodes/miniWeather-mpi-openacc"><img alt="Fortran" src="https://img.shields.io/badge/Fortran-734F96?style=for-the-badge&logo=fortran&logoColor=white"></a>
+  <a href="https://github.com/prabhkodes/jacobi-poisson-solver"><img alt="C++" src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"></a>
+  <a href="https://github.com/prabhkodes/gpu-kernel-profiling"><img alt="CUDA" src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white"></a>
+  <a href="https://github.com/prabhkodes/fft-gpu-programming-models"><img alt="OpenACC" src="https://img.shields.io/badge/OpenACC-FF6200?style=for-the-badge&logoColor=white"></a>
+  <a href="https://github.com/prabhkodes/matrix-multiplication-parallel"><img alt="MPI" src="https://img.shields.io/badge/MPI-364d6e?style=for-the-badge&logoColor=white"></a>
+  <a href="https://github.com/prabhkodes/jacobi-poisson-solver"><img alt="OpenMP" src="https://img.shields.io/badge/OpenMP-006DB8?style=for-the-badge&logoColor=white"></a>
+  <a href="https://github.com/prabhkodes/low_level_optimisations"><img alt="LLVM" src="https://img.shields.io/badge/LLVM-262D3A?style=for-the-badge&logo=llvm&logoColor=white"></a>
+  <a href="https://github.com/prabhkodes/gpu-kernel-profiling"><img alt="Nsight" src="https://img.shields.io/badge/Nsight-76B900?style=for-the-badge&logo=nvidia&logoColor=white"></a>
 </p>
 
 ---
@@ -25,6 +30,7 @@ production platforms — distributed compute, CI/CD and data pipelines — at AI
 spend my time porting and profiling scientific codes for heterogeneous CPU/GPU systems.
 
 Most of what's here was run on **Leonardo** at CINECA, up to 1792 cores or 40 A100s.
+Each badge above links to a project that uses it.
 
 ## Finding out why code is slow — then making it fast
 
@@ -52,17 +58,39 @@ Most of what's here was run on **Leonardo** at CINECA, up to 1792 cores or 40 A1
 | **[federated-learning-nextflow](https://github.com/prabhkodes/federated-learning-nextflow)** | FedAvg as a real Nextflow/SLURM workflow, one GPU per client, model weights exchanged as files |
 | **[python-hpc-interop](https://github.com/prabhkodes/python-hpc-interop)** | What Python actually costs in HPC — pybind11 lands within **5%** of native C++ |
 
-## Toolchain
+## HPC stack
 
 | | |
 |---|---|
 | **Languages** | Fortran · C · C++20 · Python · Bash |
-| **Parallel** | MPI · OpenMP · OpenACC · CUDA · NVSHMEM · cuBLAS / cuFFT |
-| **Performance** | Nsight Systems · NVTX · `perf` · llvm-mca · LLVM analysis passes · roofline |
-| **Scientific I/O** | NetCDF · HDF5 · collective MPI-IO · PETSc |
-| **Build &amp; ship** | CMake · CTest · GitHub Actions · Docker · Singularity |
-| **Clusters** | SLURM · UCX / InfiniBand · NUMA-aware pinning · Kubernetes |
-| **Machines** | Leonardo (CINECA) · JUPITER (JSC) · COKA (INFN) · ICTP / SISSA clusters |
+| **Parallel programming** | MPI (OpenMPI, HPC-X) · OpenMP · OpenACC · CUDA · NVSHMEM · NCCL |
+| **GPU libraries** | cuBLAS · cuFFT · CuPy · NVIDIA HPC SDK |
+| **Performance analysis** | Nsight Systems · NVTX · `perf` · llvm-mca · LLVM analysis passes · roofline modelling |
+| **Scientific I/O** | NetCDF · HDF5 · collective MPI-IO · ParaView / VisIt |
+| **Numerical libraries** | PETSc · ScaLAPACK · OpenBLAS · FFTW · LAPACK |
+| **Build &amp; test** | CMake · CTest · Make · Git · GitHub Actions |
+| **Clusters &amp; containers** | SLURM · UCX / InfiniBand · NUMA-aware pinning · Docker · Singularity / Apptainer |
+| **Machines** | Leonardo (CINECA) · JUPITER (JSC) · COKA (INFN) · ICTP / SISSA / Ferrara clusters |
+
+## ML stack
+
+| | |
+|---|---|
+| **Frameworks** | PyTorch · TensorFlow · scikit-learn |
+| **Scientific Python** | NumPy · SciPy · Pandas · Matplotlib · Numba · pybind11 · mpi4py |
+| **Distributed &amp; federated** | FedAvg · Nextflow · Kubeflow · Argo Workflows |
+| **Tracking** | Weights &amp; Biases |
+
+## Platform engineering stack
+
+| | |
+|---|---|
+| **Cloud** | AWS · GCP (Cloud Run, GKE) |
+| **Orchestration** | Kubernetes · Docker · Ansible |
+| **Backend** | Django · FastAPI · Flask · REST / SOAP integrations |
+| **Data stores** | PostgreSQL · MongoDB · Redis · ChromaDB |
+| **Observability** | Prometheus · Grafana · Loki · OpenTelemetry · Sentry |
+| **Reliability** | Load testing · autoscaling · capacity planning · CI/CD · on-call automation |
 
 ## Elsewhere
 
@@ -76,9 +104,7 @@ Smaller collections that the projects above grew out of —
 
 <p align="center">
   <sub>
-    Trieste, Italy ·
     <a href="mailto:prabhsharan84@gmail.com">prabhsharan84@gmail.com</a> ·
-    <a href="https://www.linkedin.com/in/prabhsharan-singh">LinkedIn</a> ·
-    open to relocation
+    <a href="https://www.linkedin.com/in/prabhsharan-singh">LinkedIn</a>
   </sub>
 </p>
