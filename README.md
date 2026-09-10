@@ -26,6 +26,15 @@ spend my time porting and profiling scientific codes for heterogeneous CPU/GPU s
 
 Most of what's here was run on **Leonardo** at CINECA, up to 1792 cores or 40 A100s.
 
+## Finding out why code is slow — then making it fast
+
+| Project | What it is | Result |
+|---|---|---|
+| **[low_level_optimisations](https://github.com/prabhkodes/low_level_optimisations)** | An out-of-tree **LLVM pass** that classifies loop memory access by stride and predicts vectorisability before the code runs | Isolated **30% pure lost vectorisation** with cache behaviour held constant |
+| **[gpu-kernel-profiling](https://github.com/prabhkodes/gpu-kernel-profiling)** | Reading Nsight Systems traces on A100 — plus tooling to extract kernel timings straight from the trace databases | Traced a kernel at **11% of peak** to a 32-way shared-memory bank conflict |
+| **[fft-gpu-programming-models](https://github.com/prabhkodes/fft-gpu-programming-models)** | Six implementations of one FFT — hand-written CUDA, OpenACC and cuFFT — benchmarked head to head | OpenACC came in **≈5× slower** than hand-tuned CUDA |
+| **[matrix-multiplication-parallel](https://github.com/prabhkodes/matrix-multiplication-parallel)** | Dense GEMM four ways, with roofline analysis | **45 TFLOP/s on 16 nodes** at N = 224,000 |
+
 ## Scientific codes, ported and optimised
 
 | Project | What it is | Result |
@@ -34,15 +43,6 @@ Most of what's here was run on **Leonardo** at CINECA, up to 1792 cores or 40 A1
 | **[quantum-espresso-ks-scaling](https://github.com/prabhkodes/quantum-espresso-ks-scaling)** | Profiling and GPU-porting the Davidson eigensolver inside Quantum ESPRESSO — plane-wave DFT | FFT scales **11.3×**, the solver only **2.4×** — the bottleneck isn't where you'd guess |
 | **[jacobi-poisson-solver](https://github.com/prabhkodes/jacobi-poisson-solver)** | One Laplace problem in four parallel models — MPI+OpenMP, HDF5 parallel I/O, OpenACC, NVSHMEM | **94% efficiency to 1120 cores**; checkpointing changes which config is fastest |
 | **[fisher-kpp-rumour-diffusion](https://github.com/prabhkodes/fisher-kpp-rumour-diffusion)** | Reaction-diffusion PDE solved in parallel with PETSc — `DMDA`, Runge-Kutta time integration | Validated against the analytic travelling-wave speed |
-
-## Finding out why code is slow and making it go faaaaast
-
-| Project | What it is | Result |
-|---|---|---|
-| **[low_level_optimisations](https://github.com/prabhkodes/low_level_optimisations)** | An out-of-tree **LLVM pass** that classifies loop memory access by stride and predicts vectorisability before the code runs | Isolated **30% pure lost vectorisation** with cache behaviour held constant |
-| **[gpu-kernel-profiling](https://github.com/prabhkodes/gpu-kernel-profiling)** | Reading Nsight Systems traces on A100 — plus tooling to extract kernel timings straight from the trace databases | Traced a kernel at **11% of peak** to a 32-way shared-memory bank conflict |
-| **[fft-gpu-programming-models](https://github.com/prabhkodes/fft-gpu-programming-models)** | Six implementations of one FFT — hand-written CUDA, OpenACC and cuFFT — benchmarked head to head | OpenACC came in **≈5× slower** than hand-tuned CUDA |
-| **[matrix-multiplication-parallel](https://github.com/prabhkodes/matrix-multiplication-parallel)** | Dense GEMM four ways, with roofline analysis | **45 TFLOP/s on 16 nodes** at N = 224,000 |
 
 ## Making it run anywhere, and at scale
 
