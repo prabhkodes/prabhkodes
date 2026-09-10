@@ -32,6 +32,14 @@ spend my time porting and profiling scientific codes for heterogeneous CPU/GPU s
 Most of what's here was run on **Leonardo** at CINECA, up to 1792 cores or 40 A100s.
 Each badge above links to a project that uses it.
 
+**Right now**
+
+- **MHPC thesis with [OGS](https://www.ogs.it/)** — taking [`gmrecords`](https://github.com/usgs/groundmotion-processing)
+  ground-motion processing to the **edge**, so a seismological network processes records on the
+  accelerometers themselves instead of shipping raw waveforms to a central server.
+- **Ongoing research on [xFFL](https://github.com/alpha-unito/xffl) with the University of Turin** —
+  cross-facility federated learning, training across HPC sites that cannot pool their data.
+
 ## Finding out why code is slow — then making it fast
 
 | Project | What it is | Result |
