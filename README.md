@@ -1,7 +1,7 @@
 <h1 align="center">Prabhsharan Singh</h1>
 
 <p align="center">
-  <b>I make scientific code run faster on bigger machines.</b><br>
+  <b>I make science code go brrrrrr.</b><br>
   <sub>Master's in High Performance Computing · ICTP &amp; SISSA, Trieste, Italy</sub>
 </p>
 
