@@ -25,7 +25,7 @@
 
 ---
 
-Currently finishing a **Master's in High Performance Computing** at the
+Currently finishing a **fully funded Master's in High Performance Computing** at the
 [**Abdus Salam International Centre for Theoretical Physics (ICTP)**](https://www.ictp.it/) — a UNESCO
 research centre in Trieste — run jointly with [SISSA](https://www.sissa.it/), the International School
 for Advanced Studies. Thesis defends December 2026.
