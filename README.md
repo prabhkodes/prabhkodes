@@ -45,7 +45,7 @@ Each badge above links to a project that uses it.
 - **Ongoing research on [xFFL](https://github.com/alpha-unito/xffl) with the University of Turin** —
   cross-facility federated learning, training across HPC sites that cannot pool their data.
 
-## Finding out why code is slow — then making it fast
+## Finding out why code is slow — then making it go brrrr
 
 | Project | What it is | Result |
 |---|---|---|
