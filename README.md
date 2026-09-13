@@ -63,7 +63,7 @@ Each badge above links to a project that uses it.
 | **[jacobi-poisson-solver](https://github.com/prabhkodes/jacobi-poisson-solver)** | One Laplace problem in four parallel models — MPI+OpenMP, HDF5 parallel I/O, OpenACC, NVSHMEM | **94% efficiency** at 1120 cores |
 | **[fisher-kpp-rumour-diffusion](https://github.com/prabhkodes/fisher-kpp-rumour-diffusion)** | Reaction-diffusion PDE solved in parallel with PETSc — `DMDA`, Runge-Kutta time integration | Matches the analytic wave speed |
 
-## Making it run anywhere, and at scale
+## Making it run anywhere, and at scale (partially about going brrrr)
 
 | Project | What it is |
 |---|---|
