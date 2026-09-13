@@ -54,7 +54,7 @@ Each badge above links to a project that uses it.
 | **[fft-gpu-programming-models](https://github.com/prabhkodes/fft-gpu-programming-models)** | Six implementations of one FFT — hand-written CUDA, OpenACC and cuFFT — benchmarked head to head | OpenACC **5× slower** than CUDA |
 | **[matrix-multiplication-parallel](https://github.com/prabhkodes/matrix-multiplication-parallel)** | Dense GEMM four ways, with roofline analysis | **45 TFLOP/s** on 16 nodes |
 
-## Scientific codes, ported and optimised
+## Scientific codes, ported and optimised (not just about going brrrr)
 
 | Project | What it is | Result |
 |---|---|---|
