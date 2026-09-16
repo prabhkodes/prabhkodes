@@ -49,7 +49,7 @@ Each badge above links to a project that uses it.
 
 | Project | What it is | Result |
 |---|---|---|
-| **[low_level_optimisations](https://github.com/prabhkodes/low_level_optimisations)** | An out-of-tree **LLVM pass** that classifies loop memory access by stride and predicts vectorisability before the code runs | A control **overturned my own conclusion** — the gap was bandwidth, not vectorisation |
+| **[low_level_optimisations](https://github.com/prabhkodes/low_level_optimisations)** | An out-of-tree **LLVM pass** that classifies loop memory access by stride and predicts vectorisability before the code runs | In a DRAM-bound loop, **traffic beats codegen** — shown with a control |
 | **[gpu-kernel-profiling](https://github.com/prabhkodes/gpu-kernel-profiling)** | Reading Nsight Systems traces on A100 — plus tooling to extract kernel timings straight from the trace databases | **11% of peak**, traced to uncoalesced writes |
 | **[fft-gpu-programming-models](https://github.com/prabhkodes/fft-gpu-programming-models)** | Six implementations of one FFT — hand-written CUDA, OpenACC and cuFFT — benchmarked head to head | cuFFT **~12×** over the best verified kernel |
 | **[matrix-multiplication-parallel](https://github.com/prabhkodes/matrix-multiplication-parallel)** | Dense GEMM four ways, with roofline analysis | **45 TFLOP/s** on 16 nodes |
@@ -71,25 +71,18 @@ Each badge above links to a project that uses it.
 | **[federated-learning-nextflow](https://github.com/prabhkodes/federated-learning-nextflow)** | FedAvg as a real Nextflow/SLURM workflow, one GPU per client, model weights exchanged as files |
 | **[python-hpc-interop](https://github.com/prabhkodes/python-hpc-interop)** | What Python actually costs in HPC — pybind11 runs **4–17%** behind native C++, depending on scale |
 
-## Keeping myself honest
+## How I report numbers
 
-In September 2026 I went back through every performance number in these repos and re-derived it from
-the committed logs and source rather than from memory. Several didn't survive, and each repo now
-carries a **Known issues and corrections** section saying what was wrong and how it was found.
+Every performance figure in these repos is re-derived from the committed logs and source rather than
+quoted from memory, and each one is published with the things that make it mean something — the
+baseline it's measured against, the build flags, and what was held constant between the runs being
+compared.
 
-| What I'd claimed | What the evidence says |
-|---|---|
-| miniWeather: **8.2×** on GPU | **≈4×.** The CPU run simulated 1000 s and the GPU run 500 s; the raw wall times were never normalised |
-| miniWeather: **parallel NetCDF** | Rank-0 aggregation. Every rank ships its slab to rank 0, which writes it |
-| FFT: **shared memory is worth 4.6×** | The kernel launches one block of N/2 threads — invalid above 1024 — and the launch error was never checked. Those timings measured a kernel that never ran |
-| LLVM pass: **30% lost purely to missed vectorisation** | A control I wrote to test it showed the gather also moves 25% more bytes. In a DRAM-bound loop that dominates; only 1.10× of a 1.61× gap is codegen |
-| pybind11: **within 5%** of native C++ | **4–17%.** The 5% figure quoted the two best of three measurements |
-| Transpose: 11% of peak **from a bank conflict** | Uncoalesced writes. The bank conflict is a real finding in the same repo, about a different kernel |
-
-The two that bother me most are the ones where the *reasoning* was wrong rather than the arithmetic:
-the FFT conclusion rested on an unchecked `cudaGetLastError()`, and the LLVM one on three instruments
-that agreed because they shared a blind spot — none of them can see memory traffic. Both are written
-up in full where they happened.
+Where a figure doesn't survive that check, I change it and write up the reasoning in the repo. The
+[LLVM pass](https://github.com/prabhkodes/low_level_optimisations/tree/main/llvm_pass_profiling#corrections)
+is the one I'd point at: I built a control experiment to test my own published conclusion, and it
+overturned it — three static instruments had agreed with each other because none of them can see
+memory traffic. The control, the measurements and the revised result are all in the repo.
 
 ## HPC stack
 
