@@ -84,6 +84,18 @@ Each badge above links to a project that uses it.
 | **[federated-learning-nextflow](https://github.com/prabhkodes/federated-learning-nextflow)** | Federated learning (FedAvg) run as a real Nextflow/SLURM workflow, one GPU per client, weights passed around as files |
 | **[python-hpc-interop](https://github.com/prabhkodes/python-hpc-interop)** | How much speed you lose by using Python in HPC. pybind11 came out **4–17%** behind native C++, depending on scale |
 
+## AI agents on HPC
+
+| Project | What it is, or is it? | Result |
+|---|---|---|
+| **[agentic-scaling-laws-hpc](https://github.com/prabhkodes/agentic-scaling-laws-hpc)** | Small Qwen2.5 models (1.5B, 3B, 7B) working alone and as 3-agent teams on 2D Ising-model problems where the exact answer is known. Run as SLURM jobs on Leonardo's A100s | Bigger models finished **faster**, t ∝ N<sup>−0.41</sup> (one run each). A 3-agent team scored **+33 points** for **1.3×** the time |
+
+## Scaling web apps
+
+| Project | What it is, or is it? | Result |
+|---|---|---|
+| **[scaling-blocking-io](https://github.com/prabhkodes/scaling-blocking-io)** | A web service that waits on a slow API (8 s median) can run out of threads before autoscaling reacts. I rebuilt that problem from scratch and compared a thread-per-request Django/uWSGI service with an async FastAPI one on Kubernetes | At 180% load uWSGI queues, p50 **7.7 s → 21.3 s**. Async sheds 43% of requests and keeps the rest flat, **7.2 s → 7.5 s**. Work in progress |
+
 ## HPC stack
 
 | | |
