@@ -33,7 +33,7 @@ I like computers, jazz, yoga, writing, my friends, and being silly.
 - **Favourite colour right now:** emerald green, RGB(80, 200, 120)
 - **Currently listening to:** [Kosmochoojuwa](https://www.youtube.com/watch?v=dq2YeAw9dTw) by Kosmonauci
 - **Currently reading:** *Letters to Milena* by Kafka
-- **Currently obsessing over:** distributed LLM training
+- **Currently obsessing over:** MoE and distributed LLM training
 
 Free Palestine. Free Lebanon.
 
