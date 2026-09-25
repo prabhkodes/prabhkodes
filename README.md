@@ -28,7 +28,7 @@
 ## Me, Myself and I
 
 liek computers, jazz, and heavy weights.
-- **Number of friends:** 4 (open to increments)
+- **Number of friends:** +/- 4 
 - **Favourite colour right now:** emerald green, RGB(80, 200, 120)
 - **Currently listening to:** [Kosmochoojuwa](https://www.youtube.com/watch?v=dq2YeAw9dTw) by Kosmonauci
 - **Currently reading:** *Letters to Milena* by Kafka
