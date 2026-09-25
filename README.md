@@ -85,19 +85,6 @@ Each badge above links to a project that uses it.
 | **[federated-learning-nextflow](https://github.com/prabhkodes/federated-learning-nextflow)** | FedAvg as a real Nextflow/SLURM workflow, one GPU per client, model weights exchanged as files |
 | **[python-hpc-interop](https://github.com/prabhkodes/python-hpc-interop)** | What Python actually costs in HPC — pybind11 runs **4–17%** behind native C++, depending on scale |
 
-## How I report numbers
-
-Every performance figure in these repos is re-derived from the committed logs and source rather than
-quoted from memory, and each one is published with the things that make it mean something — the
-baseline it's measured against, the build flags, and what was held constant between the runs being
-compared.
-
-Where a figure doesn't survive that check, I change it and write up the reasoning in the repo. The
-[LLVM pass](https://github.com/prabhkodes/low_level_optimisations/tree/main/llvm_pass_profiling#corrections)
-is the one I'd point at: I built a control experiment to test my own published conclusion, and it
-overturned it — three static instruments had agreed with each other because none of them can see
-memory traffic. The control, the measurements and the revised result are all in the repo.
-
 ## HPC stack
 
 | | |
