@@ -31,8 +31,7 @@ liek computers, jazz, and heavy weights.
 - **Number of friends:** +/- 4 
 - **Favourite colour right now:** emerald green, RGB(80, 200, 120)
 - **Currently listening to:** [Kosmochoojuwa](https://www.youtube.com/watch?v=dq2YeAw9dTw) by Kosmonauci
-- **Currently reading:** *Letters to Milena* by Kafka
-- **Currently obsessing over:** MoE and distributed LLM training
+- **Currently reading:** *The Presentation of Self* by Erving Goffman
 
 Free Palestine. Free Lebanon.
 
