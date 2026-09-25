@@ -25,7 +25,7 @@
 
 ---
 
-## Outside the terminal
+## Me, Myself and I
 
 I like computers, jazz, and heavy weights.
 - **Number of friends:** 4 (open to increments)
