@@ -29,7 +29,7 @@
 
 I like computers, jazz, yoga, writing, my friends, and being silly.
 
-- **Currently listening to:** [Kosmochoojuwa](https://open.spotify.com/album/0QaHoz7aYfIaBEuHH4LtUT) by Kosmonauci
+- **Currently listening to:** [Kosmochoojuwa](https://www.youtube.com/watch?v=dq2YeAw9dTw) by Kosmonauci
 - **Currently reading:** *Letters to Milena* by Kafka
 - **Currently obsessing over:** distributed LLM training
 
