@@ -30,11 +30,12 @@
 I like computers, jazz, yoga, writing, my friends, and being silly.
 
 - **Number of friends:** 4
+- **Favourite colour right now:** emerald green
 - **Currently listening to:** [Kosmochoojuwa](https://www.youtube.com/watch?v=dq2YeAw9dTw) by Kosmonauci
 - **Currently reading:** *Letters to Milena* by Kafka
 - **Currently obsessing over:** distributed LLM training
 
-Free Palestine, Lebanon.
+Free Palestine. Free Lebanon.
 
 ---
 
