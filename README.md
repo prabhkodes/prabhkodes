@@ -27,7 +27,7 @@
 
 ## Me, Myself and I
 
-I like computers, jazz, and heavy weights.
+liek computers, jazz, and heavy weights.
 - **Number of friends:** 4 (open to increments)
 - **Favourite colour right now:** emerald green, RGB(80, 200, 120)
 - **Currently listening to:** [Kosmochoojuwa](https://www.youtube.com/watch?v=dq2YeAw9dTw) by Kosmonauci
