@@ -25,6 +25,16 @@
 
 ---
 
+## Outside the terminal
+
+I like computers, jazz, yoga, writing, my friends, and being silly.
+
+- **Currently listening to:** [Kosmochoojuwa](https://open.spotify.com/album/0QaHoz7aYfIaBEuHH4LtUT) by Kosmonauci
+- **Currently reading:** *Letters to Milena* by Kafka
+- **Currently obsessing over:** distributed LLM training
+
+---
+
 Currently finishing a **fully funded Master's in High Performance Computing** at the
 [**Abdus Salam International Centre for Theoretical Physics (ICTP)**](https://www.ictp.it/) — a UNESCO
 research centre in Trieste — run jointly with [SISSA](https://www.sissa.it/), the International School
