@@ -29,7 +29,7 @@
 
 I like computers, jazz, yoga, writing, my friends, and being silly.
 
-- **Number of friends:** 4
+- **Number of friends:** 4 (open to increments)
 - **Favourite colour right now:** emerald green, RGB(80, 200, 120)
 - **Currently listening to:** [Kosmochoojuwa](https://www.youtube.com/watch?v=dq2YeAw9dTw) by Kosmonauci
 - **Currently reading:** *Letters to Milena* by Kafka
@@ -61,29 +61,29 @@ Each badge above links to a project that uses it.
 
 ## Finding out why code is slow — then making it go brrrr
 
-| Project | What it is | Result |
+| Project | What it is, or is it? | Result |
 |---|---|---|
-| **[low_level_optimisations](https://github.com/prabhkodes/low_level_optimisations)** | An out-of-tree **LLVM pass** that classifies loop memory access by stride and predicts vectorisability before the code runs | In a DRAM-bound loop, **traffic beats codegen** — shown with a control |
-| **[gpu-kernel-profiling](https://github.com/prabhkodes/gpu-kernel-profiling)** | Reading Nsight Systems traces on A100 — plus tooling to extract kernel timings straight from the trace databases | **11% of peak**, traced to uncoalesced writes |
-| **[fft-gpu-programming-models](https://github.com/prabhkodes/fft-gpu-programming-models)** | Six implementations of one FFT — hand-written CUDA, OpenACC and cuFFT — benchmarked head to head | cuFFT **~12×** over the best verified kernel |
-| **[matrix-multiplication-parallel](https://github.com/prabhkodes/matrix-multiplication-parallel)** | Dense GEMM four ways, with roofline analysis | **45 TFLOP/s** on 16 nodes |
+| **[low_level_optimisations](https://github.com/prabhkodes/low_level_optimisations)** | An **LLVM pass** I wrote that looks at how a loop reads memory and predicts whether it can be vectorised, without running it | In a DRAM-bound loop, **traffic beats codegen** — shown with a control |
+| **[gpu-kernel-profiling](https://github.com/prabhkodes/gpu-kernel-profiling)** | Reading Nsight Systems traces to work out why a CUDA kernel is slow on an A100, plus a small tool that pulls kernel timings out of the trace files | **11% of peak**, traced to uncoalesced writes |
+| **[fft-gpu-programming-models](https://github.com/prabhkodes/fft-gpu-programming-models)** | The same FFT written six ways (hand-written CUDA, OpenACC, cuFFT) and timed against each other | cuFFT **~12×** over the best verified kernel |
+| **[matrix-multiplication-parallel](https://github.com/prabhkodes/matrix-multiplication-parallel)** | Matrix multiplication in four parallel styles, with a roofline analysis | **45 TFLOP/s** on 16 nodes |
 
 ## Scientific codes, ported and optimised (not just about going brrrr)
 
-| Project | What it is | Result |
+| Project | What it is, or is it? | Result |
 |---|---|---|
-| **[miniWeather-mpi-openacc](https://github.com/prabhkodes/miniWeather-mpi-openacc)** | Fortran atmospheric model taken to MPI + OpenMP + OpenACC, with NetCDF output, CMake and containerised CI | **190 s → 2.1 s** on 256 cores, then **≈4×** on 8 A100s |
-| **[quantum-espresso-ks-scaling](https://github.com/prabhkodes/quantum-espresso-ks-scaling)** | Profiling and GPU-porting the Davidson eigensolver inside Quantum ESPRESSO — plane-wave DFT | FFT **11.3×**, solver only **2.4×** |
-| **[jacobi-poisson-solver](https://github.com/prabhkodes/jacobi-poisson-solver)** | One Laplace problem in three parallel models — MPI+OpenMP, HDF5 parallel I/O, OpenACC — plus NVIDIA's NVSHMEM sample | **94%** node-to-node efficiency, 1→10 nodes |
-| **[fisher-kpp-rumour-diffusion](https://github.com/prabhkodes/fisher-kpp-rumour-diffusion)** | Reaction-diffusion PDE solved in parallel with PETSc — `DMDA`, Runge-Kutta time integration | Matches the analytic wave speed |
+| **[miniWeather-mpi-openacc](https://github.com/prabhkodes/miniWeather-mpi-openacc)** | A Fortran weather model (miniWeather, by Matthew Norman) that our team of three ported to MPI, OpenMP and OpenACC, with NetCDF output, CMake and CI | **190 s → 2.1 s** on 256 cores, then **≈4×** on 8 A100s |
+| **[quantum-espresso-ks-scaling](https://github.com/prabhkodes/quantum-espresso-ks-scaling)** | Profiling the Davidson eigensolver inside Quantum ESPRESSO (a plane-wave DFT code) and porting it to GPU | FFT **11.3×**, solver only **2.4×** |
+| **[jacobi-poisson-solver](https://github.com/prabhkodes/jacobi-poisson-solver)** | The same Laplace problem solved in three parallel ways (MPI+OpenMP, HDF5 parallel I/O, OpenACC), plus NVIDIA's NVSHMEM sample | **94%** node-to-node efficiency, 1→10 nodes |
+| **[fisher-kpp-rumour-diffusion](https://github.com/prabhkodes/fisher-kpp-rumour-diffusion)** | A rumour spreading through a 2D population, modelled as a reaction-diffusion equation and solved in parallel with PETSc | Matches the analytic wave speed |
 
 ## Making it run anywhere, and at scale (partially about going brrrr)
 
-| Project | What it is |
+| Project | What it is, or is it? |
 |---|---|
-| **[hpc_containers](https://github.com/prabhkodes/hpc_containers)** | One MPI+OpenACC solver shipped four ways — native, InfiniBand-forced, Singularity, Docker — including the UCX/PMIx configuration that makes MPI work over InfiniBand *inside* a container |
-| **[federated-learning-nextflow](https://github.com/prabhkodes/federated-learning-nextflow)** | FedAvg as a real Nextflow/SLURM workflow, one GPU per client, model weights exchanged as files |
-| **[python-hpc-interop](https://github.com/prabhkodes/python-hpc-interop)** | What Python actually costs in HPC — pybind11 runs **4–17%** behind native C++, depending on scale |
+| **[hpc_containers](https://github.com/prabhkodes/hpc_containers)** | One MPI+OpenACC solver packaged four ways (native, InfiniBand-forced, Singularity, Docker), including the config that makes MPI use InfiniBand *inside* a container |
+| **[federated-learning-nextflow](https://github.com/prabhkodes/federated-learning-nextflow)** | Federated learning (FedAvg) run as a real Nextflow/SLURM workflow, one GPU per client, weights passed around as files |
+| **[python-hpc-interop](https://github.com/prabhkodes/python-hpc-interop)** | How much speed you lose by using Python in HPC. pybind11 came out **4–17%** behind native C++, depending on scale |
 
 ## HPC stack
 
