@@ -42,7 +42,7 @@ Currently finishing a **fully funded Master's in High Performance Computing** at
 research centre in Trieste — run jointly with [SISSA](https://www.sissa.it/), the International School
 for Advanced Studies. Thesis defends December 2026.
 
-I've spent ~= 5 years building production platforms — distributed compute, CI/CD and data pipelines —
+I've spent a lot of time building production platforms — distributed compute, CI/CD and data pipelines —
 at AI startups. These days I spend my time porting and profiling scientific codes for heterogeneous
 CPU/GPU systems.
 
