@@ -46,8 +46,11 @@ I've spent a lot of time building production platforms — distributed compute, 
 at AI startups. These days I spend my time porting and profiling scientific codes for heterogeneous
 CPU/GPU systems.
 
-Most of what's here was run on **Leonardo** at CINECA, up to 1792 cores or 40 A100s.
-Each badge above links to a project that uses it.
+Most of what's here was run on **Leonardo** at CINECA.
+
+Open Source Contributions:
+DeepSpeed - [PR](https://github.com/openobserve/openobserve/pull/15906)
+openobserve.ai - [PR](https://github.com/openobserve/openobserve/pull/15906) 
 
 **Right now**
 
