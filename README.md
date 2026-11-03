@@ -49,8 +49,8 @@ CPU/GPU systems.
 Most of what's here was run on **Leonardo** at CINECA.
 
 Open Source Contributions:
-DeepSpeed - [PR](https://github.com/openobserve/openobserve/pull/15906)
-openobserve.ai - [PR](https://github.com/openobserve/openobserve/pull/15906) 
+- DeepSpeed - [PR](https://github.com/openobserve/openobserve/pull/15906)
+- openobserve.ai - [PR](https://github.com/openobserve/openobserve/pull/15906) 
 
 **Right now**
 
